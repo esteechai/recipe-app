@@ -1,0 +1,16 @@
+<div class="row">
+  <div class="col-xs-12">
+    <button class="btn btn-success">New Recipe</button>
+  </div>
+</div>
+<hr>
+<div class="row">
+  <div class="col-xs-12">
+    <!--bracket recipe refers to 'recipe' in .ts file-->
+    <app-recipe-item *ngFor="let recipeElement of recipes; let i = index"
+                     [recipe]="recipeElement"
+                     [index]="i">
+    </app-recipe-item>
+  </div>
+</div>
+
