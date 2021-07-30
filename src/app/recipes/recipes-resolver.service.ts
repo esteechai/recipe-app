@@ -5,7 +5,7 @@ import {DataStorageService} from "../shared/data-storage.service";
 import {RecipeService} from "./recipe.service";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 
 export class RecipesResolverService implements Resolve<Recipe[]>{
