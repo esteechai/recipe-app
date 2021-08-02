@@ -5,16 +5,14 @@ import {RecipeDetailComponent} from "./recipe-detail/recipe-detail.component";
 import {RecipeItemComponent} from "./recipe-list/recipe-item/recipe-item.component";
 import {RecipeStartComponent} from "./recipe-start/recipe-start.component";
 import {RecipeEditComponent} from "./recipe-edit/recipe-edit.component";
-import {Router, RouterModule} from "@angular/router";
-import {BrowserModule} from "@angular/platform-browser";
-import {CommonModule} from "@angular/common";
-import {FormsModule, ReactiveFormsModule} from "@angular/forms";
-import {AuthGuard} from "../auth/auth.guard";
-import {RecipesResolverService} from "./recipes-resolver.service";
+import {RouterModule} from "@angular/router";
+import {ReactiveFormsModule} from "@angular/forms";
 import {RecipesRoutingModule} from "./recipes-routing.module";
+import {SharedModule} from "../shared/shared.module";
+import {AuthRoutingModule} from "../auth/auth-routing.module";
 
 @NgModule({
-  declarations:[
+  declarations: [
     RecipesComponent,
     RecipeListComponent,
     RecipeDetailComponent,
@@ -23,12 +21,11 @@ import {RecipesRoutingModule} from "./recipes-routing.module";
     RecipeEditComponent,
   ],
   // import Modules as components declared in this modules can only access to imported modules here.
-  imports:[
+  imports: [
     RouterModule,
-    BrowserModule,
-    CommonModule,
     ReactiveFormsModule,
-   RecipesRoutingModule,
+    RecipesRoutingModule,
+    SharedModule,
   ],
 })
 export class RecipesModule {
