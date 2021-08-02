@@ -30,15 +30,6 @@ import {RecipesRoutingModule} from "./recipes-routing.module";
     ReactiveFormsModule,
    RecipesRoutingModule,
   ],
-  // export all declared components so app.module.ts can access to these components.
-  exports:[
-    RecipesComponent,
-    RecipeListComponent,
-    RecipeDetailComponent,
-    RecipeItemComponent,
-    RecipeStartComponent,
-    RecipeEditComponent,
-  ]
 })
 export class RecipesModule {
 
